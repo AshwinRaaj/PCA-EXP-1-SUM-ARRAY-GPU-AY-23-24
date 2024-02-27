@@ -177,7 +177,7 @@ int main(int argc, char **argv)
 
 ## OUTPUT:
 
-![](1.PNG)
+![](1.png)
 
 ## RESULT:
 
