@@ -1,24 +1,24 @@
-# PCA: EXP-1 SUM ARRAY GPU
+<H1 ALIGN=CENTER> SUM ARRAY GPU </H1>
+<H3> NAME : ASHWIN RAAJ S </H3>
+<H3> REGISTER NUMBER : 212221230008 </H3>
+<H3>EXPERIMENT NO : 01 </H3>
+<H3>DATE  : 04.03.2024 </H3>
 
-<h3>NAME : Ashwin Raaj.S</h3>
-<h3>REGISTER NO: 212221230008</h3>
-<h3>EX. NO : 1</h3>
-<h3>DATE : 27.02.24</h3>
-<h1> <align=center> SUM ARRAY ON HOST AND DEVICE </h3>
+## SUM ARRAY ON HOST AND DEVICE:
 PCA-GPU-based-vector-summation.-Explore-the-differences.
+1. Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 
-i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
-
-ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
-
+2. Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
 ## AIM:
 
 To perform vector addition on host and device.
 
 ## EQUIPMENTS REQUIRED:
-
 Hardware – PCs with NVIDIA GPU & CUDA NVCC
 Google Colab with NVCC Compiler
+
+
+
 
 ## PROCEDURE:
 
@@ -30,8 +30,7 @@ Google Colab with NVCC Compiler
 6. Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
 
 ## PROGRAM:
-
-```c
+```python
 #include <cuda_runtime.h>
 #include <stdio.h>
 
@@ -176,9 +175,12 @@ int main(int argc, char **argv)
 ```
 
 ## OUTPUT:
-
-![](s1.png)
+### BLOCK SIZE = 256:
+![output256](https://github.com/Shrruthilaya-Gangadaran/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/93427705/0e2fb27f-967e-4627-82f4-b14de788909d)
+### BLOCK SIZE = 512:
+![output512](https://github.com/Shrruthilaya-Gangadaran/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/93427705/49e0c0cc-de8e-4fe5-ad43-6671b1f9489b)
+### BLOCK SIZE = 1023:
+![output1023](https://github.com/Shrruthilaya-Gangadaran/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/93427705/c0204182-3ffe-47cd-942f-0b56ca7c54eb)
 
 ## RESULT:
-
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
